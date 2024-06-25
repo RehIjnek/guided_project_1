@@ -1,5 +1,5 @@
 let nameH1;
-let climateUl, terrainUl;
+let climateSpan, terrainSpan;
 let diameterSpan, rotationalPeriodSpan, orbitalPeriodSpan, gravitySpan, populationSpan, surfaceWaterSpan;
 let filmsUl;
 let charactersUl;
@@ -8,8 +8,8 @@ const baseUrl = `https://swapi2.azurewebsites.net/api`;
 // Runs on page load
 addEventListener('DOMContentLoaded', () => {
     nameH1 = document.querySelector('h1#name');
-    climateUl = document.querySelector('#climate>ul');
-    terrainUl = document.querySelector('#terrain>ul');
+    climateSpan = document.querySelector('span#climate');
+    terrainSpan = document.querySelector('span#terrain');
     diameterSpan = document.querySelector('span#diameter');
     rotationalPeriodSpan = document.querySelector('span#rotational_period');
     orbitalPeriodSpan = document.querySelector('span#orbital_period');
@@ -68,7 +68,7 @@ addEventListener('DOMContentLoaded', () => {
     gravitySpan.textContent = planet?.gravity;
     populationSpan.textContent = planet?.population;
     surfaceWaterSpan = planet?.surface_water;
-    climatesSpan.textContent = planet?.climate;
+    climateSpan.textContent = planet?.climate;
     terrainSpan.textContent = planet?.terrain;
 
     const filmsLis = planet?.films?.map(film => `<li><a href="/film.html?id=${film.id}">${film.title}</li>`)
