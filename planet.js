@@ -73,12 +73,9 @@ addEventListener('DOMContentLoaded', () => {
 
     const filmsLis = planet?.films?.map(film => `<li><a href="/film.html?id=${film.id}">${film.title}</li>`)
     const charactersLis = planet?.characters?.map(character => `<li><a href="/character.html?id=${character.id}">${character.name}</li>`)
-    //const climatesLis = planet?.climate?.map(clim => `<li>${clim}</li>`);
-    //const terrainLis = planet?.climate?.map(clim => `<li>${clim}</li>`);
     filmsUl.innerHTML = filmsLis.join("");
     characterUl.innerHTML = charactersLis.join("");
-    //climateUl.innerHTML = climatesLis.join("");
-    //terrainUl.innerHTML = terrainLis.join("");
+    
   }
 
   
