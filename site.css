@@ -74,6 +74,10 @@ h1#name {
   margin: 50px;
 }
 
+h1#title {
+  margin: 50px;
+}
+
 #generalInfo {
   display: flex;
   flex-wrap: wrap;
